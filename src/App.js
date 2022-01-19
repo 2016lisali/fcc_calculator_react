@@ -15,7 +15,7 @@ const App = () => {
   const handleSubmit = () => {
     console.log({ calculatorData });
 
-    const total = eval(calculatorData);
+    const total = Function( "return " + calculatorData )()
     setInput(total);
     setOutput(`${total} = ${total}`);
     setCalculatorData(`${total}`);
@@ -129,6 +129,7 @@ const App = () => {
 
   useEffect(() => 
     handleOutput()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   , [calculatorData]);
 
   return (
