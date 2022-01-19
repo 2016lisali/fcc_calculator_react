@@ -31,6 +31,21 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
+button {
+  border: none;
+  font-size: 30px;
+  min-width: 80px;
+  min-height: 65px;
+  border-radius: 4px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+button:active {
+  transform: scale(0.98);
+}
+
 button.clear-operator {
   color: #ffffff;
   grid-column-end: 3;
@@ -43,6 +58,15 @@ button.equal-operator {
   grid-row: 4 / 6;
   grid-column: 4 / 4;
   background-color: #EE9406;
+}
+
+button.number {
+  background-color: #323232;
+  color: white;
+}
+
+button.operator {
+  background-color: #A5A5A5;
 }
 
 .keys button:nth-child(16) {
@@ -60,19 +84,3 @@ button.equal-operator {
   padding-right: 10px;
 }
 
-button {
-  border: none;
-  font-size: 30px;
-  min-width: 80px;
-  min-height: 65px;
-  border-radius: 4px;
-}
-
-button.number {
-  background-color: #323232;
-  color: white;
-}
-
-button.operator {
-  background-color: #A5A5A5;
-}
