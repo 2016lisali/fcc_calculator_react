@@ -81,7 +81,7 @@ const App = () => {
       const validOp = value === "x" ? "*" : value;
       if (
         (lastChatIsOperator && value !== "-") ||
-        beforeLastChatIsOperator && lastChatIsOperator
+        (beforeLastChatIsOperator && lastChatIsOperator)
       ) {
         if (beforeLastChatIsOperator) {
           const updatedValue = `${calculatorData.substring(
@@ -127,9 +127,9 @@ const App = () => {
     setOutput(calculatorData);
   };
 
-  useEffect(() => {
-    handleOutput();
-  }, [calculatorData]);
+  useEffect(() => 
+    handleOutput()
+  , [calculatorData]);
 
   return (
     <div className="container">
