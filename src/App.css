@@ -13,8 +13,8 @@
 }
 
 .calculator {
-  height: 445px;
-  max-width: 460px;
+  height: 460px;
+  max-width: 480px;
   border-radius: 4px;
   background-color: #111;
   box-shadow: 2px 2px 8px #333333;
@@ -25,20 +25,20 @@
 }
 
 .keys {
-  gap: 5px;
+  gap: 8px;
   padding: 10px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-.keys button:first-child {
+button.clear-operator {
   color: #ffffff;
   grid-column-end: 3;
   grid-column-start: 1;
   background-color: #EE9406;
 }
 
-.keys button:nth-child(15) {
+button.equal-operator {
   color: #ffffff;
   grid-row: 4 / 6;
   grid-column: 4 / 4;
@@ -62,7 +62,7 @@
 
 button {
   border: none;
-  font-size: 28px;
+  font-size: 30px;
   min-width: 80px;
   min-height: 65px;
   border-radius: 4px;
