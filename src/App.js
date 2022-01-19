@@ -14,7 +14,7 @@ const App = () => {
 
   const handleSubmit = () => {
     console.log({ calculatorData });
-
+    // eslint-disable-next-line no-new-func
     const total = Function( "return " + calculatorData )()
     setInput(total);
     setOutput(`${total} = ${total}`);
