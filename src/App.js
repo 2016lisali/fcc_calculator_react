@@ -15,7 +15,7 @@ const App = () => {
   const handleSubmit = () => {
     console.log({ calculatorData });
     // eslint-disable-next-line no-new-func
-    const total = Function( "return " + calculatorData )()
+    const total = Function("return " + calculatorData)()
     setInput(total);
     setOutput(`${total} = ${total}`);
     setCalculatorData(`${total}`);
@@ -37,7 +37,6 @@ const App = () => {
         const lastChat = calculatorData.charAt(calculatorData.length - 1);
         const isLastChatOperator =
           lastChat === "*" || operators.includes(lastChat);
-
         setInput(isLastChatOperator ? `${value}` : `${input}${value}`);
         setCalculatorData(`${calculatorData}${value}`);
       }
@@ -127,10 +126,10 @@ const App = () => {
     setOutput(calculatorData);
   };
 
-  useEffect(() => 
+  useEffect(() =>
     handleOutput()
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  , [calculatorData]);
+    , [calculatorData]);
 
   return (
     <div className="container">
